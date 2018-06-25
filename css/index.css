@@ -1,0 +1,163 @@
+:root{
+	--AColor:rgba(255,255,255,0.8);
+	--GColor:#5FB878;
+	--Bimg:url(../images/BG.png);
+}
+a{
+	color: var(--AColor);
+}
+a:hover{
+	color: var(--GColor)
+}
+.fl{
+	float: left;
+}
+.white{
+	color: #fff;
+}
+.hw{
+	color: rgba(255,255,255,0.8);
+}
+.bigsize{
+	font-size: 2.5rem;
+}
+.msize{
+	font-size: 1rem;
+}
+.ls5{
+	letter-spacing: 0.25rem;
+}
+.bold{
+	font-weight: bold;
+}
+.pt20{
+	padding-top: 1rem;
+}
+.clearfix:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.title_icon{
+	display: block;
+	width: 4rem;
+	height: 4rem;
+	line-height: 4rem;
+	border:0.5rem solid #5FB878;
+	text-align: center;
+}
+#container .nbg{
+	background: none !important;
+
+}
+.title_txt{
+	display: block;
+	width: auto;
+	height: 5rem;
+	line-height: 5rem;
+}
+.header_bg{
+	display: block;
+	width: 100%;
+	height: 40rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-size: 60%;
+	background-image: var(--Bimg);
+}
+.header_bg:after{
+	content: '';
+	display: block;
+	width: 100%;
+	height: 40rem;
+	background-color: #2F4056;
+	opacity: 0.2;
+
+}
+.title_box{
+	display: block;
+	width: 100%;
+	height: 27rem;
+	border-radius: 0.2rem;
+	background-color: rgba(0,0,0,0.3);
+	margin-top: 2rem;
+	padding-top: 3rem;
+}
+.title_preface_t{
+	display: block;
+	width: 100%;
+	height: auto;
+	padding:1rem 0;
+}
+.title_preface_tip{
+	display: block;
+	width: auto;
+	height: auto;
+	line-height: 2rem;
+	padding:0.5rem 2rem;
+	background-color: #5FB878;
+	font-size: 1.2rem;
+	box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.5);
+	border-radius: 0.2rem;
+	position: relative;
+}
+.title_preface_tip:after{
+	content: '';
+	display: block;
+	width: 0;
+	height: 0;
+	border-width: 1rem;
+	border-style: solid;
+	border-color: #5FB878 transparent transparent transparent;
+	position: absolute;
+	bottom: -1.6rem;
+	left: 1rem;
+}
+.title_preface_tipt{
+	display: block;
+	width: 100%;
+	height: 2rem;
+	line-height: 2rem;
+	padding:0.5rem 0 2rem 0;
+	color: rgba(255,255,255,0.8);
+	font-size: 1rem;
+	border-bottom: 0.1rem solid rgba(255,255,255,0.8);
+}
+.title_preface_skills{
+	display: block;
+	width: 100%;
+	height: auto;
+	padding:1rem 0;
+}
+.title_preface_sklist{
+	display: block;
+	width: 100%;
+	height: auto;
+	padding:0.8rem 0;
+}
+.title_preface_sklistt{
+	display: block;
+	width: 7rem;
+	height: 1rem;
+	line-height: 1rem;
+}
+.title_preface_sklistr{
+	display: block;
+	width: calc(100% - 7rem);
+	height: 1rem;
+	line-height: 1rem;
+}
+.title_preface_Rimg{
+	display: block;
+	width: 100%;
+	height: 26rem;
+	background-position:-13rem bottom;
+	background-repeat: no-repeat;
+	background-size:auto 80%;
+	background-image: var(--Bimg);
+	background-color: var(--AColor);
+}
