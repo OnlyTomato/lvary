@@ -3,6 +3,9 @@
 	--GColor:#5FB878;
 	--Bimg:url(../images/BG.png);
 }
+html,body{
+	font-family: '微软雅黑'
+}
 a{
 	color: var(--AColor);
 }
@@ -12,8 +15,23 @@ a:hover{
 .fl{
 	float: left;
 }
+.fr{
+	float: right;
+}
+.tr{
+	text-align: right;
+}
+.tc{
+	text-align: center;
+}
 .white{
 	color: #fff;
+}
+.green{
+	color: var(--GColor);
+}
+.hui{
+	color: #888;
 }
 .hw{
 	color: rgba(255,255,255,0.8);
@@ -33,10 +51,49 @@ a:hover{
 .pt20{
 	padding-top: 1rem;
 }
+.pt40{
+	padding-top: 2rem;
+}
+.pt100{
+	padding-top:5rem; 
+}
+.pb20{
+	padding-bottom: 1rem;
+}
+.pb100{
+	padding-bottom: 5rem;
+}
+.mb16{
+	margin-bottom: 0.8rem;
+}
+.h30{
+	height: 30rem;
+}
 .clearfix:after{
 	content: '';
 	display: block;
 	clear: both;
+}
+.p0{
+	padding:0; 
+}
+.bglh{
+	background: linear-gradient(#f4f4f4,#ccc)
+}
+.bgh{
+	background-color: #f4f4f4;
+}
+.bgb{
+	background: linear-gradient(#313131,#1c1d1f)
+}
+.bcw::before{
+	background-color: #fff;
+}
+.bcb::before{
+	background-color: #666;
+}
+.mtc{
+	margin:0 auto;
 }
 .title_icon{
 	display: block;
@@ -58,24 +115,23 @@ a:hover{
 }
 .header_bg{
 	display: block;
-	width: 100%;
 	height: 40rem;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: -1;
 	background-position: bottom;
 	background-repeat: no-repeat;
 	background-size: 60%;
 	background-image: var(--Bimg);
 }
-.header_bg:after{
+.header_bg:before{
 	content: '';
 	display: block;
 	width: 100%;
 	height: 40rem;
 	background-color: #2F4056;
 	opacity: 0.2;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index:0;
 
 }
 .title_box{
@@ -160,4 +216,276 @@ a:hover{
 	background-size:auto 80%;
 	background-image: var(--Bimg);
 	background-color: var(--AColor);
+}
+.bg_user{
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-position:left;
+	background-repeat: no-repeat;
+	background-size:auto 100%;
+	background-image: var(--Bimg);
+	transition: all 0.5s;
+	-webkit-transition:all 0.5s;
+	-moz-transition:all 0.5s;
+	-o-transition:all 0.5s;
+}
+.bg_user:hover{
+	background-position: -20rem;
+}
+.user_content{
+	display: block;
+	width: calc(100% - 10rem);
+	height: calc(100% - 7rem);;
+	padding: 5rem 5rem 2rem 5rem;
+}
+.user—txt{
+	padding:2rem 0;
+	letter-spacing: 2px;
+	line-height: 2.5rem;
+}
+.btn{
+	display: block;
+	width: auto;
+	height: auto;
+	line-height: 40px;
+	border:1px solid #ccc;
+	border-radius: 1rem;
+	padding:0 2rem;
+	margin:0 3rem 0 0;
+	cursor: pointer;
+}
+.btn:hover{
+	background-color: var(--GColor);
+	border-color: var(--GColor);
+	color: white;
+}
+.service_title{
+	display: inline-block;
+	width: auto;
+	height: auto;
+	padding:1rem 0;
+	position: relative;
+}
+.service_title::before{
+	content: '';
+	display: block;
+	width: 140%;
+	height: 0.1rem;
+	position: absolute;
+	bottom: 0;
+	left: -20%;
+}
+.service_title::after{
+	content: '';
+	display: block;
+	width: 4rem;
+	height: 0.5rem;
+	background-color: var(--GColor);
+	position: absolute;
+	bottom: -0.2rem;
+	left: calc(50% - 2rem);
+}
+.service_list{
+	height: auto;
+	height: 15rem;
+}
+.service_listL{
+	display: block;
+	height:100%;
+}
+.service_listR{
+	display: block;
+	height:100%;
+	padding-right: 4rem;
+}
+.service_list:nth-child(even) .service_listR{
+	padding-left: 4rem;
+	padding-right: 0;
+}
+.service_list_item{
+	display: block;
+	width: 5rem;
+	height: 5rem;
+	border-radius: 50%;
+	background-color: #fff;
+	transition: all 0.5s;
+	-webkit-transition:all 0.5s;
+	-moz-transition:all 0.5s;
+	-o-transition:all 0.5s;
+	position: relative;
+}
+
+.service_list_itemIcon{
+	display: block;
+	width: 100%;
+	height: 100%;
+	line-height: 5rem;
+	position: relative;
+	-webkit-transition:all 0.5s;
+	-moz-transition:all 0.5s;
+	-o-transition:all 0.5s;
+}
+.service_list_itemIcon::before{
+	position: relative;
+	z-index: 5;
+	-webkit-transition:all 0.5s;
+	-moz-transition:all 0.5s;
+	-o-transition:all 0.5s;
+}
+.service_list_itemIcon::after{
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: var(--GColor);
+	position: absolute;
+	left: calc(50% - 2.5rem);
+	top: calc(50% - 2.5rem);
+	z-index: 0;
+	transform: scale(0);
+	-webkit-transition:all 0.5s;
+	-moz-transition:all 0.5s;
+	-o-transition:all 0.5s;
+}
+.service_list_item:hover .service_list_itemIcon::after{
+	transform: scale(1);
+}
+.service_list_item:hover .service_list_itemIcon::before{
+	color: #fff;
+}
+
+.works_btnRow{
+	display: inline-block;
+	width: auto;
+	height: auto;
+}
+.btn_w{
+	border-radius: 0;
+	margin:1rem;
+	overflow: hidden;
+	position: relative;
+	transition:  0.3s ease-in;
+	-webkit-transition: 0.3s ease-in;
+	-moz-transition: 0.3s ease-in;
+	-o-transition: 0.3s ease-in;
+}
+.btn_w:before{
+	content: '';
+	display: block;
+	width: 3rem;
+	height: 6rem;
+	transform: skewX(-45deg);
+	background-color: #fff;
+	opacity: 0.5;
+	position: absolute;
+	top: -3rem;
+	left:-4rem;
+	transition:  0.3s ease-out;
+	-webkit-transition: 0.3s ease-out;
+	-moz-transition: 0.3s ease-out;
+	-o-transition: 0.3s ease-out;
+}
+.btn_w:hover:before{
+	left:150%;
+}
+.btn_this{
+	background-color: var(--GColor);
+	color: #fff;
+}
+.works_item{
+	display: block;
+	width: calc(100% - 2rem);
+	padding:1rem;
+	position: relative;
+}
+.works_itemImg{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.works_itemIn{
+	display: block;
+	width: calc(100% - 4rem);
+	height: calc(100% - 4rem);
+	position: absolute;
+	top: 2rem;
+	left: 2rem;
+	background-color: rgba(33,33,33,0.4);
+	border:0.1rem solid var(--GColor);
+	transition: all 0.5s;
+	-webkit-transition:all 0.5s;
+	-moz-transition:all 0.5s;
+	-o-transition:all 0.5s;
+	opacity: 0;
+}
+.works_item:hover .works_itemIn{
+	opacity: 1;
+}
+
+.ex_list{
+	display: block;
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+.ex_listL{
+	display: inline-block;
+	width: auto;
+	height: 3rem;
+	line-height: 3rem;
+	padding:0 4rem;
+	background-color: #333;
+}
+.ex_listIconP{
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 33.5%;
+}
+.ex_listIcon{
+	display: inline-block;
+	width: 3rem;
+	height: 3rem;
+	line-height: 3rem;
+	border-radius: 50%;
+	position: relative;
+	z-index: 1;
+	font-size: 1.5rem;
+}
+.ex_listIine{
+	display: block;
+	width: 0.1rem;
+	height: 100%;
+	background-color: #888;
+	position: absolute;
+	top: 0;
+	left: calc(50% - 0.05rem);
+	z-index: 0;
+}
+.ex_tipbox{
+	display: block;
+	width: calc(100% - 4rem);
+	height: auto;
+	padding:1rem;
+	margin:0 1rem;
+	border-radius: 0.2rem;
+	box-shadow: 0 0 0.5rem #aaa;
+	position: relative;
+	background-color: #fff;
+}
+.ex_tip_content{
+	line-height: 1.5rem;
+}
+.lsj{
+	display: block;
+    width: 0;
+    height: 0;
+    border-width: 1rem;
+    border-style: solid;
+    border-color:  transparent #fff transparent transparent;
+    position: absolute;
+    top: 1rem;
+    left: -2rem;
 }
